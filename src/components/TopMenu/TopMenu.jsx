@@ -48,7 +48,7 @@ const TopMenu = () => {
   };
 
   const exportImage = () => {
-    editor.renderer.toDataURL().then((url) => {
+    editor.renderer.toDataURL(editor.scene.exportToJSON()).then((url) => {
       const a = document.createElement("a");
       a.href = url;
       a.download = "exportedImage.png";
@@ -57,6 +57,7 @@ const TopMenu = () => {
       document.body.removeChild(a);
     });
   };
+
   return (
     <div className="flex items-center justify-between h-16 bg-[#FFF5EB] px-4">
       <h1 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500">

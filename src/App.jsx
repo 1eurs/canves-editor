@@ -1,6 +1,6 @@
 import Editor from "./components/Editor/Editor";
+import TopMenu from "./components/TopMenu/TopMenu";
 import ScenesPanel from "./components/scenes/ScenesPanel";
-import TopMenu from "./components/toolbox/TopMenu";
 
 function App() {
   return (
